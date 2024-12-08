@@ -1,0 +1,130 @@
+.test{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    overflow: hidden; 
+}
+
+.content {
+    padding: 5px;
+    /* background-color: lightblue; */
+    border-radius: 8px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%;
+    animation: scroll-left 60s linear infinite; /* Animation to scroll text */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start from the right side */
+      }
+      50% {
+        transform: translateX(0); /* Move to its normal position (fully visible) */
+      }
+      100% {
+        transform: translateX(-100%); /* Move to the left side */
+      }
+  }
+.below-nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-way{
+    margin-top: 16px;
+}
+
+.whatsapp{
+    display: flex;
+}
+
+.whatsapp i{
+    margin-top: 16px
+}
+
+.contact-info{
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 4px;
+}
+.portal-btn{
+   padding: 16px 48px 16px 48px;
+   background-color: green;
+   color: white;
+}
+
+/* branches */
+/* Styling for the dropdown menu */
+.nav-item.dropdown {
+    position: relative;
+  }
+  
+  /* Make the dropdown menu visible when hovering over the parent item */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Hide dropdown by default */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    min-width: 160px;
+    cursor: pointer;
+  }
+  
+  /* Style for the links inside the dropdown */
+  .dropdown-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+  }
+  
+
+/* endd */
+
+.portal-btn:hover{
+    background-color: tomato !important;
+    border-radius: 35px;
+    transition: 0.5s;
+}
+
+
+/* small */
+@media only screen and (max-width:767px){
+    .below-nav{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        place-items: center;
+    }
+
+    .whatsapp{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        place-items: center;
+    }
+}
+
+/* medium */
+@media only screen and (min-width: 768px) and (max-width:1200px){
+    
+    .below-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
