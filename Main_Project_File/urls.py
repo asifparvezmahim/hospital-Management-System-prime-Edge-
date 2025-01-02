@@ -20,13 +20,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from Home.views import home
 from Department.views import all_departments
-# from Department.views import dept_details
+from Doctors.views import doctor_list,get_an_appointment
+from Accounts.views import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",home),
+    path("",home,name="home"),
     path("departments/",all_departments),
-    # path("departments-details/",dept_details,name="details"),
+    path("doctors/",doctor_list,name="doctors"),
+    path("doctor/get_appointment/<int:id>/",get_an_appointment,name="get_an_appointment"),
+    path("login/",login,name="login")
 ]
 urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

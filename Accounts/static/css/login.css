@@ -1,0 +1,45 @@
+
+.login-section {
+    background-color: #dadada6b;
+    display: flex;
+    justify-content: center;
+    height: 450px; /* Full viewport height */
+    margin: 0;
+}
+
+.login-box{
+    width: 80%;
+    line-height: 100px; /* Vertically center text */
+}
+
+.login-heading{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-form-container{
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.login-form-container button{
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: blueviolet !important;
+    color: white !important;
+    margin-left: 15%;
+}
+.sign-up_btn{
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: rgba(172, 255, 47, 0.616) !important ;
+    color: white !important;
+    /* margin-left: 15%; */
+}
+
+.second-section{
+    padding-top: 13%;
+}
+
+

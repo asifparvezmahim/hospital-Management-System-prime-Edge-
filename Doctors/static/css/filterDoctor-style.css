@@ -1,0 +1,55 @@
+
+.doct-container {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.doctor{
+  height: 450px;
+  width: 222px;
+  /* border: 1px solid black; */
+}
+
+
+.doctor img{
+  height: 220px;
+  width: 220px;
+}
+
+.more{
+  text-decoration: none;
+  font-weight: bold;
+  color: green;
+}
+
+.more:hover{
+    color: brown;
+    font-weight: bolder;
+    transition: 0.50s;
+}
+
+.docor-search:hover{
+  background-color: rgb(249, 37, 0) !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  transition: 0.50s !important;
+}
+
+.filter-container{
+  display: flex;
+  justify-content: space-between;
+}
+/* small */
+@media only screen and (max-width:767px){
+  .filter-container{
+    flex-direction: column;
+    align-items:center;
+    gap: 20px;
+  }
+
+}
+
+/* medium */
+@media only screen and (min-width: 768px) and (max-width:1200px){
+
+}

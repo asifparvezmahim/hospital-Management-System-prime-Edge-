@@ -1,3 +1,4 @@
+
 .test{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -102,7 +103,18 @@
     transition: 0.5s;
 }
 
+.auth-button a{
+  cursor:pointer !important
+}
 
+.login-btn:hover{
+   border-radius: 0px 50px 50px 0px!important;
+   transition: .8s;
+}
+.logout-btn:hover{
+   border-radius: 50px 0px 0px 50px!important;
+   transition: .8s;
+}
 /* small */
 @media only screen and (max-width:767px){
     .below-nav{

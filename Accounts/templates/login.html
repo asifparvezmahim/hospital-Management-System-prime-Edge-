@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="login-section">
+  <div class="login-box d-flex mt-3 mb-3">
+    <div class="first-section w-50 bg-light">
+      <h3 class="login-heading">Login Here</h3>
+      <div class="login-form-container">
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="password" class="form-control mt-2" id="exampleInputPassword1" placeholder="Password">
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="second-section w-50 bg-danger text-center">
+      <h3 class="">Welcome To Login</h3>
+      <h5>Have Not Create Any Account?</h5>
+      <button type="submit" class="sign-up_btn btn">Sign Up</button>
+    </div>
+  </div>
+</div>
+{% endblock  %}

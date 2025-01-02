@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "Department",
     "Branches",
     "Doctors",
+    "Accounts",
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -145,7 +146,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     BASE_DIR / "Home" / "static",
     BASE_DIR / "Doctors" / "static",
-    # BASE_DIR / "product" / "static",
+    BASE_DIR / "Accounts" / "static",
     # BASE_DIR / "cart" / "static",
     # BASE_DIR / "deposite" / "static",
 ]

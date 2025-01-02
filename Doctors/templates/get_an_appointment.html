@@ -1,0 +1,28 @@
+{% extends "base.html" %} {%load static%}
+{%block content%} 
+<div class="details-container">
+    <div class="image">
+        <img src="{{selected_doctor.image.url}}" alt="" srcset="">
+    </div>
+    <div class="info">
+        <p class="fs-4 fw-bold text-success">{{selected_doctor.name}} <span>(<small class='pb-2'>{{selected_doctor.degree}}</small>)</span></p>
+
+                <p><span class="fw-bold">Specialities</span>: 
+                  {%for speciality in selected_doctor.specialities.all%}
+                      {{speciality.name|title}}
+                  {%endfor%}
+                </p>
+                <p><span class="fw-bold">Branch</span>: 
+                  {%for branch in selected_doctor.branch.all%}
+                      {{branch.name|title}}
+                  {%endfor%}
+                </p>
+                <p><span class="fw-bold">Practice Day</span>: 
+                  {%for day in selected_doctor.practice_day.all%}
+                      {{day.name|title}}
+                  {%endfor%}
+                </p>                 
+                <a href="" class="more">Confirm appointment</i></a>
+    </div>
+</div>
+{%endblock%}

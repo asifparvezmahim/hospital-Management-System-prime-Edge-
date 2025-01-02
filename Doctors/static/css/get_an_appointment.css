@@ -1,0 +1,9 @@
+.details-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.details-container img{
+    height: 300px;
+    width: 250px;
+}

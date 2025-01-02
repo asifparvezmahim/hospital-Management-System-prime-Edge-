@@ -15,8 +15,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="{%static "css/nav.css"%}">
     <link rel="stylesheet" href="{%static "css/home-style.css"%}">
+    <link rel="stylesheet" href="{%static "css/filterDoctor-style.css"%}">
+    <link rel="stylesheet" href="{%static "css/get_an_appointment.css"%}">
+    <link rel="stylesheet" href="{%static "css/login.css"%}">
     {%block stylelink%} {%endblock%}
   </head>
   <body class="body">
@@ -29,7 +33,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
             <li class="nav-item">
-              <a class="nav-link mx-3 text-light" aria-current="page" href="">HOME</a>
+              <a class="nav-link mx-3 text-light" aria-current="page" href="{%url "home"%}">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-3 text-light" aria-current="page" href="{%url "doctors"%}">Docotrs</a>
             </li>
 
             <li class="nav-item dropdown">
@@ -62,6 +69,13 @@
       </div>
     </div>
 
+    <div class="buttons">
+      <div class="auth-button d-flex justify-content-between ">
+        <a href="{%url "login"%}" class="login-btn text-decoration-none border-0 px-5 py-3 bg-primary text-light fw-bold fs-4">Login</a>
+        <a class="logout-btn text-decoration-none border-0 px-5 py-3 bg-warning text-light fw-bold fs-4">Sign Up</a>
+      </div>
+    </div>
+
     <div class="below-nav">
       <div class="name mt-3">
         <a class="navbar-brand ml-5" href="#"><span class="text-dark fw-bolder fs-2">PrimeEdge Medical Center</span></a>
@@ -75,9 +89,9 @@
         </div>
       </div>
 
-      <div class="patient-portal mt-3 ">
+      {% comment %} <div class="patient-portal mt-3 ">
         <a href="" class="btn portal-btn">Patient Portal <br> (Patient History with Us)</a>
-      </div>
+      </div> {% endcomment %}
     </div>
 
     {%block content%} {%endblock%}
